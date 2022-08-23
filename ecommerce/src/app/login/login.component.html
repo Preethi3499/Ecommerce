@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      
+      <h4 class="card-title">Login Here</h4>
+      <form name="user">
+        <mat-progress-bar mode="buffer" *ngIf="progressBar"></mat-progress-bar>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="user.username"  required/>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="password" name="password" [(ngModel)]="user.password" required/>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="addUser()">Login</button>
+        
+      </form>
+    </div>
+    
+    <p>Not a member?</p><button class="btn btn-primary btn-block mb-4 "><a class="nav-link active" aria-current="page" routerLink="/reg" routerLinkActive="active">Register</a>    </button>
+
+  </div>

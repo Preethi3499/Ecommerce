@@ -1,0 +1,26 @@
+
+<div>
+    <h1>------User Products Informations -----</h1>
+    <table border="1" class="table table-striped">
+        <thead class="thead-light thead-light">
+            <tr>
+                <th scope="col">Products Id</th>
+                <th scope="col">Products Description</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Picture Url</th>
+                <th scope="col">Price</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.id}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.pictureUrl}}</td>
+                <td>{{p.price}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+</div>

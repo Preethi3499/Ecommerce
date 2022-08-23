@@ -1,0 +1,28 @@
+
+<div class="toolbar" role="banner">
+  <i class="fas fa-shopping-cart"></i>
+  <button mat-button><span  [routerLink]="['/dashboard']">Welcome to E-commerce Website</span></button>
+  <button mat-button [matMenuTriggerFor]="menu">Menu <i class="fas fa-caret-down"></i></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let cat of categories"
+      [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
+  </mat-menu>
+<div>
+  <button mat-button><a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>    </button>
+</div>
+  <div class="spacer"></div>
+  <button mat-button><a type="button" [routerLink]="['/dashboard']">
+    Shop <i class="fas fa-home"></i>
+  </a></button>
+
+  <button mat-button>
+  <a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
+    Profile <i class="fas fa-user"></i>
+  </a></button>
+
+  <button mat-button><a type="button" (click)="login()" *ngIf="!user">
+    login
+  </a></button>
+</div><br>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,37 @@
+
+<div>
+    <h1>------User Profile Informations -----</h1>
+    <!-- <label>User Id :</label>
+        <input type="text" name="id" ngModel>
+        <button type="submit" onclick="search()">search</button>
+        <br>
+        <br>  -->
+    <table border="1" class="table table-striped">
+        <thead class="thead-light thead-light">
+            <tr>
+                <th scope="col">User Id</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Password</th>
+                <th scope="col">Address</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Card_No</th>
+                <th scope="col">CVV</th>
+                <th scope="col">EmailId</th>
+                <th scope="col">CardHolder</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of users">
+                <td>{{p.id}}</td>
+                <td>{{p.username}}</td>
+                <td>{{p.password}}</td>
+                <td>{{p.address}}</td>
+                <td>{{p.admin}}</td>
+                <td>{{p.cardNumber}}</td>
+                <td>{{p.cvv}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.nameOnCard}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
